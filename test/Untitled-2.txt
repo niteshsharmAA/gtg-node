@@ -1,0 +1,78 @@
+
+Binanace Future Tradng API List
+===========================================
+
+1. Market Price
+2. Limit Order
+3. Stop Limit Order
+4. Buy Order List
+5. Sell Order List
+=======================================================
+https://binance-docs.github.io/apidocs/spot/en/#futures
+================================================================================================
+1. Account need to transfer for future Account
+ Money Transfer spot account and future account
+
+Link- POST /sapi/v1/futures/transfer
+
+2. Future Account Transaction History List
+
+Link :-GET /sapi/v1/futures/transfer
+
+3. Cross-Collateral Borrow History
+
+Link:- GET /sapi/v1/futures/loan/borrow/history
+
+4. Cross-Collateral Repayment History
+
+Link:- GET /sapi/v1/futures/loan/repay/history
+
+5. Loan Wallet - Cross-Collateral Wallet V2
+
+Link:- GET /sapi/v2/futures/loan/wallet
+
+6. Adjust Cross-Collateral LTV History
+
+Link:- GET /sapi/v1/futures/loan/adjustCollateral/history
+
+7. Cross-Collateral Liquidation History - 
+
+Link:- GET /sapi/v1/futures/loan/liquidationHistory 
+
+8. Cross-Collateral Interest History
+
+Link:- GET /sapi/v1/futures/loan/interestHistory
+
+
+Futures Algo Endpoints
+
+
+1. Volume Participation(VP) New Order (TRADE)
+
+Link :- POST /sapi/v1/algo/futures/newOrderVp
+
+2. Cancel Algo Order (TRADE)
+
+Link:- /sapi/v1/algo/futures/order
+
+3. Query Current Algo Open Orders
+
+Link:- GET /sapi/v1/algo/futures/openOrders
+
+4. Query Current Algo Open Orders
+
+Link:- GET /sapi/v1/algo/futures/openOrders
+
+5. Query Historical Algo Orders
+
+Link:- GET /sapi/v1/algo/futures/historicalOrders
+
+6. Query Sub Orders
+
+Link:- GET /sapi/v1/algo/futures/subOrders
+
+
+
+=========================================
+
+https://binance-docs.github.io/apidocs/spot/en/#compressed-aggregate-trades-list

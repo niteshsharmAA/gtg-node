@@ -1,0 +1,59 @@
+requirement -- candle graph and state machine
+
+1. Candle graph is not based onQuery(it is always a continuous flow of streaming of real time transactional data) To do so we need a state machine (like kafka) we need to have few topics(publisher and subscriber) the incoming data will be published and subsequently subscribed by consumer
+
+2. topic like buy sell of coins there we need publisher and subscriber (or consumer )
+
+3. table structure id --> all column for order ---> asset ----> coin bps ---> impact coin bps ----> coin value ---> impact coin value ----> share value ---> impact share value
+
+4. impact calculation = previous value - current value if > 0 then increase , if less than 0 then decrease 
+
+5. there is always a base price which will be set at the initial stage by admin or developer.
+
+6. currency table id ---> currency ---> currency country ---> base value in USD ---> unit value
+
+7. transaction fees id --->currency ---> amount start ---> amount end ---> fees ----> unit
+
+8. asset table for unit bps value id ---> asset/symbol ---> icon ---> bps value
+
+
+Request data	
+
+	Operation			Buy			
+							
+	amount				7000			
+							
+	trading currency		INR
+	
+	base currency			USD			
+							
+	Transaction fees		50			
+							
+							
+	net tradable amount		6950		
+	
+	net equvaluent tradable 
+	amount before conversion 
+	fee				$17.38
+	
+	
+	net equivalent trading 
+	amount post conversion 
+	fee				$17.37
+	
+	
+	
+	Interim operation		Currency Conversion	
+	
+	
+	Trading currency			INR	
+	base currency				USD	
+	conversion rate				$0.00250	
+	conversion chnarge			$0.00025	
+							
+							
+	10000		1 bit coin		
+	17./37		0.0017370	17370	bps
+							
+							
+	1 bitcoin		10000000	Bps	

@@ -1,0 +1,3 @@
+node_modules/
+dist/
+logger/app.log
